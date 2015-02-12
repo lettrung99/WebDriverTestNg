@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="GridTest" verbose="1" parallel="classes" thread-count="5">
+
+	<parameter name="hub_url" value="http://localhost:4444/wd/hub" />
+
+	<test name="TestWindows" >
+		<parameters>
+			<parameter name="platform" value="WINDOWS" />
+			<parameter name="browser" value="Internet Explorer" />
+			<parameter name="url" value="http://dl.dropbox.com/u/55228056/bmicalculator.html" />
+		</parameters>
+		<classes>
+			<class name="com.ariba.ai.SeGridTest" />
+		</classes>
+	</test>
+	<test name="TestLinux" >
+		<parameters>
+			<parameter name="platform" value="LINUX" />
+			<parameter name="browser" value="firefox" />
+			<parameter name="url" value="http://dl.dropbox.com/u/55228056/bmicalculator.html" />
+		</parameters>
+		<classes>
+			<class name="com.ariba.ai.SeGridTest" />
+		</classes>
+	</test>
+</suite>
