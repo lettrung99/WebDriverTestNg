@@ -18,7 +18,7 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
-public class SeGridTest {
+public class SeGridTest3 {
 	
 	WebDriver driver = null;
 	private StringBuffer verificationErrors = new StringBuffer();
@@ -61,16 +61,16 @@ public class SeGridTest {
 			caps.setVersion(version);
 		
 		try{
-			System.out.println("MY HUB: " + hub_url);
+			System.out.println("MY HUB3: " + hub_url);
 			driver = new RemoteWebDriver(new URL(hub_url), caps);
 		}catch(Exception e){
-			System.out.println("MY HUB: " + e.getMessage());
+			System.out.println("MY HUB3: " + e.getMessage());
 			if (browser.equalsIgnoreCase("Firefox"))
 				driver = new FirefoxDriver();
 		  if (browser.equalsIgnoreCase("Safari"))
 			  driver = new SafariDriver();
 		}
-		System.out.println("MY URL: " + url);
+		System.out.println("MY URL3: " + url);
 		// Open the BMI Calculator Application
 		driver.get(url);
 		
