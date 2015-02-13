@@ -4,7 +4,7 @@
 
 	<parameter name="hub_url" value="http://10.162.167.80:4444/wd/hub" />
 
-<!-- 	<test name="TestWindows" parallel="instances">
+	<test name="TestWindows" parallel="instances">
 		<parameters>
 			<parameter name="platform" value="WINDOWS" />
 			<parameter name="browser" value="Internet Explorer" />
@@ -14,7 +14,7 @@
 		<classes>
 			<class name="com.ariba.ai.test.SeGridTest" />
 		</classes>
-	</test> -->
+	</test> 
 <!-- 	<test name="TestMAC" parallel="instances">
 		<parameters>
 			<parameter name="platform" value="MACS" />
@@ -28,7 +28,7 @@
 			
 		</classes>
 	</test> -->
-	<test name="TestLinux" >
+	<!-- <test name="TestLinux" >
 		<parameters>
 			<parameter name="platform" value="LINUX" />
 			<parameter name="browser" value="firefox" />
@@ -49,5 +49,5 @@
 		<classes>
 		    <class name="com.ariba.ai.test.SeGridTest2" />
 		</classes>
-	</test>
+	</test> -->
 </suite>
