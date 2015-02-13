@@ -2,7 +2,7 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <suite name="GridTest" verbose="1" parallel="tests" thread-count="5" >
 
-	<parameter name="hub_url" value="http://localhost:4444/wd/hub" />
+	<parameter name="hub_url" value="http://10.162.167.80:4444/wd/hub" />
 
 <!-- 	<test name="TestWindows" parallel="instances">
 		<parameters>
