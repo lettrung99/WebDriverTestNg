@@ -56,6 +56,7 @@ public class SeGridTest {
 		// Version
 		caps.setVersion(version);
 		try{
+			System.out.println("MY HUB: " + hub_url);
 			driver = new RemoteWebDriver(new URL(hub_url), caps);
 		}catch(Exception e){
 			if (browser.equalsIgnoreCase("Firefox"))
