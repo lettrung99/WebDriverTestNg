@@ -4,9 +4,9 @@
 
 	<parameter name="hub_url" value="http://10.162.167.80:4444/wd/hub" />
 
-	<test name="TestWindows" parallel="instances">
+	<test name="TestVista" parallel="instances">
 		<parameters>
-			<parameter name="platform" value="WINDOWS" />
+			<parameter name="platform" value="VISTA" />
 			<parameter name="browser" value="Internet Explorer" />
 			<parameter name="version" value="" />
 			<parameter name="url" value="http://dl.dropbox.com/u/55228056/bmicalculator.html" />

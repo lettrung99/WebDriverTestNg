@@ -34,6 +34,9 @@ public class SeGridTest {
 		if (platform.equalsIgnoreCase("Windows"))
 			caps.setPlatform(org.openqa.selenium.Platform.WINDOWS);
 		
+		if (platform.equalsIgnoreCase("Vista"))
+			caps.setPlatform(org.openqa.selenium.Platform.VISTA);
+		
 		if (platform.equalsIgnoreCase("MAC"))
 			caps.setPlatform(org.openqa.selenium.Platform.MAC);
 		
@@ -54,17 +57,20 @@ public class SeGridTest {
 			caps = DesiredCapabilities.android();
 		
 		// Version
-		caps.setVersion(version);
+		if(!"".equals(version))
+			caps.setVersion(version);
+		
 		try{
 			System.out.println("MY HUB: " + hub_url);
 			driver = new RemoteWebDriver(new URL(hub_url), caps);
 		}catch(Exception e){
+			System.out.println("MY HUB: " + e.getMessage());
 			if (browser.equalsIgnoreCase("Firefox"))
 				driver = new FirefoxDriver();
 		  if (browser.equalsIgnoreCase("Safari"))
 			  driver = new SafariDriver();
 		}
-		
+		System.out.println("MY URL: " + url);
 		// Open the BMI Calculator Application
 		driver.get(url);
 		/*try {
