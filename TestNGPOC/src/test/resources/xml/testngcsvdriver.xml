@@ -4,7 +4,7 @@
 
 	<parameter name="hub_url" value="http://10.162.167.80:4444/wd/hub" />
 
-	<test name="TestCsvIE" parallel="instances">
+	<!-- <test name="TestCsvIE" parallel="instances">
 		<parameters>
 			<parameter name="platform" value="VISTA" />
 			<parameter name="browser" value="Internet Explorer" />
@@ -15,7 +15,7 @@
 		<classes>
 			<class name="com.ariba.ai.test.webdriver.SeGridCsvWebDriverTest" />
 		</classes>
-	</test>
+	</test> -->
 	
 	<test name="TestCsvLinuxN" parallel="instances">
 		<parameters>
