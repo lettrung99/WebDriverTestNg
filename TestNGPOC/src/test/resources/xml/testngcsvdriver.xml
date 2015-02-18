@@ -6,8 +6,8 @@
 
 	<test name="TestCsvLinuxN" parallel="instances">
 		<parameters>
-			<parameter name="platform" value="LINUX" />
-			<parameter name="browser" value="firefox" />
+			<parameter name="platform" value="VISTA" />
+			<parameter name="browser" value="Internet Explorer" />
 			<parameter name="version" value="" />
 			<parameter name="url" value="https://svcqass.ariba.com" />
 			<parameter name="csvFileName" value="seleniumRc1.csv" />
