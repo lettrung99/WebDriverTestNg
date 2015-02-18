@@ -4,10 +4,23 @@
 
 	<parameter name="hub_url" value="http://10.162.167.80:4444/wd/hub" />
 
-	<test name="TestCsvLinuxN" parallel="instances">
+	<test name="TestCsvIE" parallel="instances">
 		<parameters>
 			<parameter name="platform" value="VISTA" />
 			<parameter name="browser" value="Internet Explorer" />
+			<parameter name="version" value="" />
+			<parameter name="url" value="https://svcqass.ariba.com" />
+			<parameter name="csvFileName" value="seleniumRc1.csv" />
+		</parameters>
+		<classes>
+			<class name="com.ariba.ai.test.webdriver.SeGridCsvWebDriverTest" />
+		</classes>
+	</test>
+	
+	<test name="TestCsvLinuxN" parallel="instances">
+		<parameters>
+			<parameter name="platform" value="LINUX" />
+			<parameter name="browser" value="firefox" />
 			<parameter name="version" value="" />
 			<parameter name="url" value="https://svcqass.ariba.com" />
 			<parameter name="csvFileName" value="seleniumRc1.csv" />
