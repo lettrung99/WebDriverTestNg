@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="GridTestCsv" verbose="1" parallel="tests" thread-count="3">
+
+	<parameter name="hub_url" value="http://10.162.167.80:4444/wd/hub" />
+
+	<test name="TestCsvLinuxN" parallel="instances">
+		<parameters>
+			<parameter name="platform" value="LINUX" />
+			<parameter name="browser" value="firefox" />
+			<parameter name="csvFile" value="/Users/i845198/git/WebDriverTestNg/TestNGPOC/src/test/resources/com/ariba/ai/test/rc/seleniumRc1.csv" />
+			<parameter name="url" value="https://svcqass.ariba.com" />
+			<parameter name="hubhost" value="localhost" />
+			<parameter name="hubport" value="8080" />
+		</parameters>
+		<classes>
+			<class name="com.ariba.ai.test.rc.SeGridCsvTest1" />
+		</classes>
+	</test>
+	
+</suite>
