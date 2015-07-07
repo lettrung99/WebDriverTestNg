@@ -534,10 +534,6 @@ public abstract class SeleniumBase {
 	 * their element they wish to wait for and value for timing out. If a build
 	 * exception happens the method will return.
 	 * 
-	 * @author barobrien
-	 * @param waitForElement
-	 * @param timeout
-	 * @return
 	 */
 	protected void waitForElementPresent (final String waitForElement, int timeout)
 	{
@@ -568,25 +564,6 @@ public abstract class SeleniumBase {
 		}
 	}
 
-	/**
-	 * Return the first element that is visible and enables that matches the
-	 * AwBy. This is useful in lists with hidden menus for the list items.
-	 * 
-	 * @author aoesterholm
-	 * @param awNameSubstring
-	 * @return
-	 */
-	protected WebElement findFirstVisible (String awNameSubstring)
-	{
-		List<WebElement> webElements = this
-				.findElementsByAwnameSubstring(awNameSubstring);
-		for (WebElement e : webElements) {
-			if (e.isDisplayed()) {
-				return e;
-			}
-		}
-		return null;
-	}
 
 	/**
 	 * wait maxWaitSeconds for a text field with a chooser drop down to load. A
@@ -663,11 +640,6 @@ public abstract class SeleniumBase {
 
 	/**
 	 * Check if a checkbox is ticked
-	 * 
-	 * @author rbrady, aoesterholm
-	 * @param by
-	 * @return
-	 * @throws Exception 
 	 */
 	public boolean isCheckBoxTicked (AwBy by) throws Exception
 	{
@@ -757,10 +729,6 @@ public abstract class SeleniumBase {
 	 * When called it will search for all of the i icons a page, Click on them
 	 * and take a screenshot of the popup message
 	 * 
-	 * @author chinchey
-	 * @throws Exception 
-	 * @deprecated Use clickAll method since the aw names for I icons are
-	 *             different on each page
 	 */
 	protected void captureIIcons () throws Exception
 	{
@@ -839,9 +807,6 @@ public abstract class SeleniumBase {
 	 * the element name. For Example: this method could be used to click all
 	 * tabs at the top of a page. Calls wait for page to load between clicks
 	 * 
-	 * @author barobrien
-	 * @param awNameSubstring
-	 * @throws Exception 
 	 */
 	public void clickAll (String awNameSubstring) throws Exception
 	{
@@ -856,11 +821,6 @@ public abstract class SeleniumBase {
 	 * difference in the number of clicks will not misalign the screens the
 	 * follow after clickAll()
 	 * 
-	 * @author aoesterholm
-	 * @param awNameSubstring
-	 * @param incrementScreenCount
-	 * @param screenNameSuffix
-	 * @throws Exception 
 	 */
 	public void clickAll (String awNameSubstring, boolean incrementScreenCount,
 			String screenNameSuffix) throws Exception
@@ -887,12 +847,6 @@ public abstract class SeleniumBase {
 	/**
 	 * click method that combines awName substring with visible text on page
 	 * 
-	 * @author rbrady,aoesterholm
-	 * @param awNameSubstring
-	 * @return WebElement the web element that was clicked or null if no
-	 *         matching element was found. This element will most likely be
-	 *         stale if you try and interact with it.
-	 * @throws Exception 
 	 */
 	public WebElement click (String awNameSubstring, String visibleText) throws Exception
 	{
@@ -917,10 +871,6 @@ public abstract class SeleniumBase {
 	/**
 	 * Return a list with all the elements on the page that match the AwBy
 	 * parameter
-	 * 
-	 * @author aoesterholm
-	 * @param by
-	 * @return
 	 */
 	protected List<WebElement> findElements (AwBy by)
 	{
@@ -928,25 +878,8 @@ public abstract class SeleniumBase {
 	}
 
 	/**
-	 * Return a list with all the elements on the page that match the awname
-	 * substring.
-	 * 
-	 * @author aoesterholm
-	 * @param awNameSubstring
-	 * @return
-	 */
-	@SuppressWarnings("deprecation")
-	protected List<WebElement> findElementsByAwnameSubstring (String awNameSubstring)
-	{
-		return findElements(AwBy.xpath("//*[contains(@awname, '" + awNameSubstring
-				+ "')]"));
-	}
-
-
-	/**
 	 * To check the presence of an element with visible text.
 	 * 
-	 * @author gavijay
 	 */
 	public boolean isElementPresent (String awNameSubstring, String visibleText)
 	{
@@ -966,12 +899,6 @@ public abstract class SeleniumBase {
 	/**
 	 * Method to: test whether or not specified text is present in a <Select>
 	 * dropdown
-	 * 
-	 * @author karthur, aoesterholm
-	 * @param by
-	 * @param visibleText
-	 * @return
-	 * @throws Exception 
 	 */
 	public boolean isMenuOptionPresent (AwBy by, String visibleText) throws Exception
 	{
@@ -986,9 +913,6 @@ public abstract class SeleniumBase {
 
 	/**
 	 * Expands the '...' element to achieve the text hidden behind it
-	 * 
-	 * @author rbrady
-	 * @throws Exception 
 	 */
 	protected void expandPageHintText () throws Exception
 	{
@@ -1010,10 +934,6 @@ public abstract class SeleniumBase {
 	/**
 	 * Override this method on any page that needs to filter out sample data,
 	 * dates, times etc. that will be different in every run.
-	 * 
-	 * @author aoesterholm
-	 * @param htmlWithStyles
-	 * @return htmlWithStyles the input unchanged
 	 */
 	public String filterHtmlSource (String htmlWithStyles)
 	{

@@ -37,14 +37,6 @@ public class AribaWebDriverTestCase extends SeleniumBase {
 		return _seleniumCSVTestCase;
 	}
 
-	// TODO
-	// This is a map of strings that we will replace (if present) in either the
-	// target string or the value string.
-	// Used primarily to replace a canonical realm with a different realm name.
-	// Ex: "S4All" substring
-	// will be replaced by "S4All-1". For parallelization, multiple realms with
-	// the same canonical form have
-	// been created for some of the most commonly used realms.
 	private Map<String, String> _replaceStringMap = null;
 	
 

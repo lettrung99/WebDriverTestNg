@@ -1,12 +1,3 @@
-/*
-    Copyright (c) 1996-2009 Ariba, Inc.
-    All rights reserved. Patents pending.
-
-    $Id: //ariba/ond/platform/R1_rel/test/test-framework/test/ariba/framework/SeleniumCSVTestCase.java#1 $
-
-    Responsible: jimh
- */
-
 package ariba.ai.testing.selenium.rc;
 
 import ariba.ui.aribaweb.test.TestLinkHolder;

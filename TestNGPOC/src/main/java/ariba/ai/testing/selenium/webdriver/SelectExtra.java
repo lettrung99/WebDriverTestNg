@@ -6,13 +6,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
-/**
- * Models a SELECT tag, providing helper methods to select and deselect options.
- * Has the additional isVisibleTextPresent method
- * 
- * @author aoesterholm
- *
- */
+
 public class SelectExtra extends Select {
 
     private WebElement element2;
@@ -28,10 +22,6 @@ public class SelectExtra extends Select {
     /**
      * Check if the text is the text of any of the <Option> tags in the <Select>
      * menu
-     * 
-     * @author karthur
-     * @param text
-     * @return
      */
     public boolean isVisibleTextPresent (String text)
     {
@@ -70,14 +60,6 @@ public class SelectExtra extends Select {
         return matched;
     }
 
-    /**
-     * Had to copy this from the Select class since it's private there
-     * /aoesterholm.
-     * 
-     * @author aoesterholm
-     * @param s
-     * @return
-     */
     private String getLongestSubstringWithoutSpace (String s)
     {
         String result = "";
