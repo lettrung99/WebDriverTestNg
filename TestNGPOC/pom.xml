@@ -7,7 +7,7 @@
 	<description>A testNG poc mvn project to run selenium testing on the grid.</description>
 
 	<properties>
-		<testngXml>testng.xml</testngXml>
+		<testngXml>src/test/resources/xml/testngcsvdriver.xml</testngXml>
 	</properties>
 
 	<build>
