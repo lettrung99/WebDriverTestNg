@@ -1,0 +1,4 @@
+open,/Buyer/Main/aw?awh=r&awssk=exrEBaQ6&realm=p2pTeSg&dard=1,
+clickAndWait,//*[@id='loginForm']/table/tbody/tr[4]/td/input,
+clickAndWait,[@awname='dashboard::TestCentralPage:anchorLink'],
+wait,2,
